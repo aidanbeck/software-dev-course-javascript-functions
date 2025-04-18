@@ -29,6 +29,15 @@ reusable functions that solve specific tasks. This activity encourages:
 // Create a function that:
 // - Takes a name and a role (e.g., "Alice", "speaker")
 // - Returns a string in the format: "Name: Alice, Role: Speaker"
+function makeBadge(name, role) {
+    return "Name: " + name + ", Role: " + role;
+}
+
+
+let badge = makeBadge("aidan", "speaker");
+console.log(badge);
+
+
 
 // Steps:
 // 1. Define the function with two parameters.
@@ -52,6 +61,20 @@ reusable functions that solve specific tasks. This activity encourages:
 // 4. Return the final total.
 
 
+function calculateEventCost(attendees, costPerAttendees) {
+    let totalCost = attendees * costPerAttendees;
+
+    if (attendees > 100) {
+        totalCost *= 0.9;
+    }
+
+    return totalCost;
+}
+
+let cost = calculateEventCost(110, 15);
+console.log(cost);
+
+
 // ============================================
 // 🧩 Task 3: Validate Email
 // ============================================
@@ -63,6 +86,20 @@ reusable functions that solve specific tasks. This activity encourages:
 // Steps:
 // 1. Check if the string includes both "@" and ".".
 // 2. Return true or false accordingly.
+
+function validateEmail(email) {
+    let includesAt = email.includes("@");
+    let includesPeriod = email.includes(".");
+
+    if (includesAt && includesPeriod) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+let realEmail = validateEmail("aidanm@beckoutlook.com");
+console.log(realEmail);
 
 
 // ============================================
@@ -89,3 +126,5 @@ reusable functions that solve specific tasks. This activity encourages:
 // - Explain how your team approached the design and testing process
 
 // ✅ Bonus: Can you extend any of the functions to be more flexible or reusable?
+
+// Alex, Greg, Aidan, Christian
